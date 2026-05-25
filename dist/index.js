@@ -1,4 +1,24 @@
+import { execute, testEnvironment, sessionCodec, listPiModels, listPiSkills, syncPiSkills } from "./server/index.js";
 export const type = "pi_fork_local";
+export function createServerAdapter() {
+    return {
+        type: "pi_fork_local",
+        execute,
+        testEnvironment,
+        listSkills: listPiSkills,
+        syncSkills: syncPiSkills,
+        sessionCodec,
+        models: [],
+        modelProfiles: [],
+        listModels: listPiModels,
+        supportsLocalAgentJwt: true,
+        supportsInstructionsBundle: true,
+        instructionsPathKey: "instructionsFilePath",
+        requiresMaterializedRuntimeSkills: true,
+        agentConfigurationDoc,
+    };
+}
+export const type_pi_fork = "pi_fork_local";
 export const label = "Pi Fork (local)";
 export const SANDBOX_INSTALL_COMMAND = "npm install -g @mariozechner/pi-coding-agent@0.74.0";
 export const models = [];
