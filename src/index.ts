@@ -66,6 +66,8 @@ Core fields:
 - thinking (string, optional): thinking level (off, minimal, low, medium, high, xhigh)
 - command (string, optional): defaults to "pi"
 - env (object, optional): KEY=VALUE environment variables
+- tools (string, optional): comma-separated allowlist of pi tools to enable. Default: "read,bash,edit,write,grep,find,ls". Set to "all" or omit to enable ALL tools (including MCP, extensions). Override to restrict or change the tool set.
+- additionalSkills (string[], optional): additional skill directories to pass via --skill. Pi supports multiple --skill flags — they are additive on top of the default skill discovery. Example: ["/home/user/.agents/skills"]
 
 Operational fields:
 - timeoutSec (number, optional): run timeout in seconds

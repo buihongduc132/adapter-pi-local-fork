@@ -633,9 +633,22 @@ export async function execute(ctx: AdapterExecutionContext): Promise<AdapterExec
     if (modelId) args.push("--model", modelId);
     if (thinking) args.push("--thinking", thinking);
 
-    args.push("--tools", "read,bash,edit,write,grep,find,ls");
+    // Tools: allow override via adapterConfig.tools
+    // If set → --tools <value>. If empty/"all"/unset → omit --tools entirely (pi enables ALL tools)
+    const toolsOverride = asString(config.tools, "").trim();
+    if (toolsOverride && toolsOverride !== "all") {
+      args.push("--tools", toolsOverride);
+    }
+    // else: no --tools flag → pi enables all tools by default
+
     args.push("--session", sessionFile);
     args.push("--skill", remoteSkillsDir ?? PI_AGENT_SKILLS_DIR);
+
+    // Additional skill directories — pi supports multiple --skill flags (additive)
+    const additionalSkills = asStringArray(config.additionalSkills);
+    for (const skillDir of additionalSkills) {
+      if (skillDir.trim()) args.push("--skill", skillDir.trim());
+    }
 
     if (extraArgs.length > 0) args.push(...extraArgs);
 
