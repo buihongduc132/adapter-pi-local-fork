@@ -41,8 +41,15 @@
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts"
   },
-  "files": [
-    "dist"
+  "paperclipPlugin": {
+    "manifest": "./dist/manifest/index.js",
+    "worker": "./dist/worker/index.js"
+  },
+  "keywords": [
+    "paperclip",
+    "adapter",
+    "pi",
+    "plugin"
   ],
   "scripts": {
     "build": "tsc",
@@ -51,6 +58,7 @@
   },
   "dependencies": {
     "@paperclipai/adapter-utils": "2026.517.0",
+    "@paperclipai/plugin-sdk": "2026.517.0",
     "picocolors": "^1.1.1"
   },
   "devDependencies": {
