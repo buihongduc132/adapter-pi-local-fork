@@ -1,15 +1,15 @@
 {
-  "name": "adapter-pi-local-fork",
+  "name": "adapter-pi-local",
   "version": "0.4.0",
   "description": "Fork of @paperclipai/adapter-pi-local with opt-in model preflight",
   "license": "MIT",
-  "homepage": "https://github.com/buihongduc132/adapter-pi-local-fork",
+  "homepage": "https://github.com/buihongduc132/adapter-pi-local",
   "bugs": {
-    "url": "https://github.com/buihongduc132/adapter-pi-local-fork/issues"
+    "url": "https://github.com/buihongduc132/adapter-pi-local/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/buihongduc132/adapter-pi-local-fork"
+    "url": "https://github.com/buihongduc132/adapter-pi-local"
   },
   "type": "module",
   "main": "./dist/index.js",
@@ -35,10 +35,7 @@
   "files": [
     "dist"
   ],
-  "paperclipPlugin": {
-    "manifest": "./dist/manifest/index.js",
-    "worker": "./dist/worker/index.js"
-  },
+
   "keywords": [
     "paperclip",
     "adapter",
