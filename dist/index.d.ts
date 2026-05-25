@@ -2,7 +2,7 @@ import type { AdapterModelProfileDefinition } from "@paperclipai/adapter-utils";
 import { execute, testEnvironment, listPiModels, listPiSkills, syncPiSkills } from "./server/index.js";
 export declare const type = "pi_fork_local";
 export declare const label = "Pi Fork (local)";
-export declare const SANDBOX_INSTALL_COMMAND = "npm install -g @mariozechner/pi-coding-agent@0.74.0";
+export declare const SANDBOX_INSTALL_COMMAND = "npm install -g @earendil-works/pi-coding-agent@0.74.0";
 export declare const models: Array<{
     id: string;
     label: string;

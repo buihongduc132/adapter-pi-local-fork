@@ -1,7 +1,7 @@
 import { execute, testEnvironment, sessionCodec, listPiModels, listPiSkills, syncPiSkills, } from "./server/index.js";
 export const type = "pi_fork_local";
 export const label = "Pi Fork (local)";
-export const SANDBOX_INSTALL_COMMAND = "npm install -g @mariozechner/pi-coding-agent@0.74.0";
+export const SANDBOX_INSTALL_COMMAND = "npm install -g @earendil-works/pi-coding-agent@0.74.0";
 export const models = [];
 export const modelProfiles = [];
 // External adapter registration — upstream doesn't need this because it's built-in.
