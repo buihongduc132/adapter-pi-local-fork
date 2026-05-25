@@ -1,0 +1,3 @@
+import type { TranscriptEntry } from "@paperclipai/adapter-utils";
+export declare function resetParserState(): void;
+export declare function parsePiStdoutLine(line: string, ts: string): TranscriptEntry[];

@@ -1,5 +1,5 @@
 {
-  "name": "@buihongduc132/adapter-pi-local-fork",
+  "name": "adapter-pi-local-fork",
   "version": "0.4.0",
   "description": "Fork of @paperclipai/adapter-pi-local with opt-in model preflight",
   "license": "MIT",
@@ -41,6 +41,9 @@
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts"
   },
+  "files": [
+    "dist"
+  ],
   "paperclipPlugin": {
     "manifest": "./dist/manifest/index.js",
     "worker": "./dist/worker/index.js"
