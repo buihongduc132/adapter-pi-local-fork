@@ -239,7 +239,9 @@ export async function testEnvironment(ctx) {
             const probe = await runAdapterExecutionTargetProcess(runId, target, command, args, {
                 cwd,
                 env: runtimeEnv,
-                timeoutSec: 60,
+                timeoutSec: typeof config.helloProbeTimeoutSec === 'number' && config.helloProbeTimeoutSec > 0
+                    ? config.helloProbeTimeoutSec
+                    : 60,
                 graceSec: 5,
                 onLog: async () => { },
             });

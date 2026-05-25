@@ -264,7 +264,9 @@ export async function testEnvironment(
         {
           cwd,
           env: runtimeEnv,
-          timeoutSec: 60,
+          timeoutSec: typeof config.helloProbeTimeoutSec === 'number' && config.helloProbeTimeoutSec > 0
+            ? config.helloProbeTimeoutSec
+            : 60,
           graceSec: 5,
           onLog: async () => {},
         },

@@ -72,6 +72,7 @@ Operational fields:
 - graceSec (number, optional): SIGTERM grace period in seconds
 - preflightModelCheck (boolean, optional): run \`pi --list-models\` preflight before execution. Default: false.
 - modelDiscoveryTimeoutSec (number, optional): timeout for model discovery preflight in seconds. Default: 90. Only used when preflightModelCheck is true.
+- helloProbeTimeoutSec (number, optional): timeout for the hello probe (test environment) in seconds. Default: 60.
 
 Notes:
 - Pi supports multiple providers and models. Use \`pi --list-models\` to list available options.
